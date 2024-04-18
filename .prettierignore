@@ -1,0 +1,7 @@
+bun.lockb
+dist
+node_modules
+.astro
+pnpm-lock.yaml
+
+**/banco-de-provas/**
