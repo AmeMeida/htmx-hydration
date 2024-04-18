@@ -1,0 +1,17 @@
+---
+import Layout from "@layouts/Layout.astro";
+
+// import Partial from "@layouts/Partial.astro";
+---
+
+<Layout title="teste!!">
+  <button hx-get="/partials/svolte" hx-swap="beforeend" hx-target="#count-sv" hx-trigger="click">clique!!</button>
+
+  <div id="count-sv"></div>
+
+  <br><br>
+
+  <button hx-get="/partials/rect" hx-swap="beforeend" hx-target="#count-rc" hx-trigger="click">clique!!</button>
+
+  <div id="count-rc"></div>
+</Layout>

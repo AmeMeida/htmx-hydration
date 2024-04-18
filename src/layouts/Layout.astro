@@ -4,6 +4,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import htmx from "htmx.org/dist/htmx.min.js?url"
 ---
 
 <!doctype html>
@@ -14,12 +16,18 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <script src={htmx} is:inline></script>
     <title>{title}</title>
   </head>
-  <body>
+  <body hx-ext="head-support">
     <slot />
   </body>
 </html>
+
+<script>
+  import "htmx.org/dist/ext/head-support";
+</script>
+
 <style is:global>
   :root {
     --accent: 136, 58, 234;
